@@ -1,4 +1,4 @@
-function setupWebViewJavascriptBridge(callback) {
+export function setupWebViewJavascriptBridge(callback) {
 	if (window.WebViewJavascriptBridge) { return callback(WebViewJavascriptBridge); }
 	if (window.WVJBCallbacks) { return window.WVJBCallbacks.push(callback); }
 	window.WVJBCallbacks = [callback];
@@ -6,10 +6,5 @@ function setupWebViewJavascriptBridge(callback) {
 	WVJBIframe.style.display = 'none';
 	WVJBIframe.src = 'https://__bridge_loaded__';
 	document.documentElement.appendChild(WVJBIframe);
-	setTimeout(function() { document.documentElement.removeChild(WVJBIframe) }, 0)
+	setTimeout(function () { document.documentElement.removeChild(WVJBIframe) }, 0);
 }
-setupWebViewJavascriptBridge(function (bridge) {
-	script = document.createElement('script');
-	script.src = './plugins/index.js';
-	document.documentElement.appendChild(script);
-})
