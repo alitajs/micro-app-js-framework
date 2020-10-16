@@ -26,10 +26,7 @@ export function registerPlugin(plugin) {
     if (!window.alita[pluginName]) {
         window.alita[pluginName] = {};
     }
-    if (!window.alitanative) {
-        window.alita[pluginName] = hooks;
-        return;
-    }
+
     methodsList.forEach(methodName => {
         window.alita[pluginName][methodName] = (data) => {
             return new Promise((resolve, reject) => {
