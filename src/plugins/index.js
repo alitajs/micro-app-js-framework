@@ -1,4 +1,5 @@
 import Device from './device';
+import Media from './media';
 
 if (!window.alita) {
     window.alita = {};
@@ -6,6 +7,7 @@ if (!window.alita) {
 
 const plugins = [
     Device,
+    Media,
 ];
 
 /**
@@ -13,14 +15,14 @@ const plugins = [
  * @param any plugin 插件
  */
 export function registerPlugin(plugin) {
-    const { nativePluginName, jsPluginName, methodsList } = plugin;
-    if (!window.alita[jsPluginName]) {
-        window.alita[jsPluginName] = {};
+    const { pluginName, methodsList } = plugin;
+    if (!window.alita[pluginName]) {
+        window.alita[pluginName] = {};
     }
     methodsList.forEach(methodName => {
-        window.alita[jsPluginName][methodName] = (data) => {
+        window.alita[pluginName][methodName] = (data) => {
             return new Promise((resolve, reject) => {
-                WebViewJavascriptBridge.callHandler(`${nativePluginName}.${methodName}`, data === undefined ? null : data, (responseData) => {
+                WebViewJavascriptBridge.callHandler(`${pluginName}.${methodName}`, data === undefined ? null : data, (responseData) => {
                     resolve(responseData);
                 });
             });

@@ -1,6 +1,5 @@
 const device = {
-  nativePluginName: 'Device',
-  jsPluginName: 'device',
+  pluginName: 'device',
   methodsList: [
     'platform',
   ]

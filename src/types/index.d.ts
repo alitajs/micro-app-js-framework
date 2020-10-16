@@ -5,7 +5,8 @@ interface AlitaBridge {
 declare var WebViewJavascriptBridge: AlitaBridge;
 
 interface Alita {
-
+    device: Device;
+    media: Media;
 }
 
 declare var alita: Alita;
