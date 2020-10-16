@@ -15,14 +15,18 @@ const plugins = [
  * @param any plugin 插件
  */
 export function registerPlugin(plugin) {
-    const { pluginName, methodsList } = plugin;
+    const { pluginName, methodsList, hooks } = plugin;
     if (!window.alita[pluginName]) {
         window.alita[pluginName] = {};
+    }
+    if (!window.alitanative) {
+        window.alita[pluginName] = hooks;
+        return;
     }
     methodsList.forEach(methodName => {
         window.alita[pluginName][methodName] = (data) => {
             return new Promise((resolve, reject) => {
-                WebViewJavascriptBridge.callHandler(`${pluginName}.${methodName}`, data === undefined ? null : data, (responseData) => {
+                WebViewJavascriptBridge?.callHandler(`${pluginName}.${methodName}`, data === undefined ? null : data, (responseData) => {
                     resolve(responseData);
                 });
             });
@@ -37,4 +41,5 @@ export function registerPlugins() {
     plugins.forEach((plugin) => {
         registerPlugin(plugin);
     });
+
 }
