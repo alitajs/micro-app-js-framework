@@ -1,8 +1,9 @@
 {
   "name": "alita-micro",
-  "version": "0.0.1-beta.3",
+  "version": "0.0.1-beta.4",
   "description": "",
   "main": "dist/index.esm.js",
+  "types": "src/types/index.d.ts",
   "scripts": {
     "build": "father-build"
   },

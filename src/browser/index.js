@@ -15,21 +15,21 @@ function initBridge() {
   };
 
   function callHandler(handlerName, data, responseCallback) {
+    console.log('callHandler')
     switch (handlerName) {
       case 'device.platform':
-        responseCallback('web');
+        responseCallback({ status: 0, message: 'success', responseData: 'web' });
         break;
       case 'media.chooseImage':
-        responseCallback({ files: { path: 'https://alitajs.com/assets/ad/umi3banner.jpeg', base64: '' } });
+        responseCallback({ status: 0, message: 'success', responseData: { files: [{ path: 'https://alitajs.com/assets/ad/umi3banner.jpeg', base64: '' }] } });
         break;
       default:
-        responseCallback('');
+        responseCallback({ status: 3, message: 'error: handlerName not found!' });
         break;
     }
-
   }
 }
-
+console.log(process.env.NODE_ENV)
 if (process.env.NODE_ENV === 'development' && !window.alitanative) {
   initBridge();
 }
