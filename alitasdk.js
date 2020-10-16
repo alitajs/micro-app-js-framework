@@ -150,7 +150,7 @@ var AlitaAndroid = AlitaBridge.extend({
   // TODO: 预想的包名
   _className: "com/alitajs/platform/javascript/AppActivity",
   _callGetStringMethod: function (method) {
-    return jsb.reflection.callStaticMethod(this._className, method, "()Ljava/lang/String;");
+    return jsb.reflection.callStaticMethod("com/alitajs/platform/javascript/AppActivity", method, "()Ljava/lang/String;");
   },
 
   _callGetIntMethod: function (method) {
