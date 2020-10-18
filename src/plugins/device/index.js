@@ -2,6 +2,7 @@ const device = {
   pluginName: 'device',
   methodsList: [
     'platform',
+    'scanCode',
   ],
   hooks: {
     platform: () => {
