@@ -3,6 +3,7 @@ const device = {
   methodsList: [
     'platform',
     'scanCode',
+    'systemInfo',
   ],
   hooks: {
     platform: () => {
