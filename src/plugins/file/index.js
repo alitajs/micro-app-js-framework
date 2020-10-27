@@ -2,6 +2,7 @@ const file = {
   pluginName: 'file',
   methodsList: [
     'openDocument',
+    'saveFile',
   ]
 }
 
