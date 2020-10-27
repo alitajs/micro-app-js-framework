@@ -1,6 +1,7 @@
 /// <reference path="../plugins/device/types/index.d.ts" />
 /// <reference path="../plugins/media/types/index.d.ts" />
 /// <reference path="../plugins/ui/types/index.d.ts" />
+/// <reference path="../plugins/file/types/index.d.ts" />
 
 interface AlitaBridge {
     callHandler: (handlerName: string, data: any, responseCallback: (response: any) => void) => void;

@@ -10,7 +10,14 @@ interface Device {
    * @param {boolean} params.onlyFromCamera 是否只能从相机扫码，不允许从相册选择图片
    */
   scanCode: (params: { onlyFromCamera: boolean }) => Promise<{ result: string }>;
+  /**
+   * @name 获取系统信息
+   */
   systemInfo: () => Promise<SystemInfo>;
+  /**
+   * @name 打开网页
+   * @param {string} url 地址
+   */
   openWeb: (url: string) => Promise<any>;
 }
 
