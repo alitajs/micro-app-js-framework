@@ -4,6 +4,7 @@ const device = {
     'platform',
     'scanCode',
     'systemInfo',
+    'openWeb',
   ],
   hooks: {
     platform: () => {
