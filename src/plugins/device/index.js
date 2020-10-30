@@ -5,6 +5,9 @@ const device = {
     'scanCode',
     'systemInfo',
     'openWeb',
+    'fetchMicroAppList',
+    'openMicroApp',
+    'getUserData',
   ],
   hooks: {
     platform: () => {
