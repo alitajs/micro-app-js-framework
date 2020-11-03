@@ -8,14 +8,7 @@ const device = {
     'fetchMicroAppList',
     'openMicroApp',
     'getUserData',
-  ],
-  hooks: {
-    platform: () => {
-      return new Promise((resolve, reject) => {
-        resolve('web');
-      });
-    }
-  }
+  ]
 }
 
 export default device;

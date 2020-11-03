@@ -10,6 +10,8 @@ interface AlitaBridge {
 interface Alita {
     device: Device;
     media: Media;
+    file: File;
+    ui: UI;
 }
 
 interface Window {
