@@ -9,7 +9,7 @@ interface Device {
    * @description 调用原生扫描二维码
    * @param {boolean} params.onlyFromCamera 是否只能从相机扫码，不允许从相册选择图片
    */
-  scanCode: (params: { onlyFromCamera: boolean }) => Promise<{ result: string }>;
+  scanCode: (params: { onlyFromCamera?: boolean }) => Promise<{ result: string }>;
   /**
    * @name 获取系统信息
    */
