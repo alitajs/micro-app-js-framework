@@ -61,7 +61,7 @@ function initBridge() {
       case 'ui.setNavBar':
         responseCallback({ status: 0, message: 'success', responseData: 'web 中无法修改状态栏，请在真机或模拟器上调试，如果是 web 项目，可修改 alita-layout 的 navBar' });
         break;
-      case 'ui.setBackgroundcolor':
+      case 'ui.setBackgroundColor':
         responseCallback({ status: 0, message: 'success', responseData: 'web 中无法修改背景色，请在真机或模拟器上调试' });
         break;
         
