@@ -1,6 +1,6 @@
 {
   "name": "alita-micro",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "",
   "main": "dist/index.esm.js",
   "types": "src/types/index.d.ts",
@@ -12,7 +12,10 @@
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "files": ["dist","src/**/**.d.ts"],
+  "files": [
+    "dist",
+    "src/**/**.d.ts"
+  ],
   "dependencies": {
     "father-build": "^1.18.5"
   }
