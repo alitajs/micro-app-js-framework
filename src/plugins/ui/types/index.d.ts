@@ -11,4 +11,9 @@ interface UI {
      * @param params.backgroundColor    背景色，只支持十六进制
      */
     setBackgroundColor: (params: { backgroundColor: string; }) => Promise<void>;
+    /**
+     * @name 设置导航栏颜色
+     * @param params.theme 主题
+     */
+    setStatusBar: (params: { theme: 'light' | 'dark' }) => Promise<void>;
 }

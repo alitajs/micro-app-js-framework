@@ -3,6 +3,7 @@ const ui = {
     methodsList: [
         'setNavBar',
         'setBackgroundColor',
+        'setStatusBar',
     ]
 }
 
