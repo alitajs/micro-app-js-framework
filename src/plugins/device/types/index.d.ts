@@ -1,3 +1,5 @@
+type MapString = 'baidu' | 'amap' | 'apple' | 'google' | 'qq';
+
 interface Device {
   /**
    * @name 平台
@@ -33,6 +35,14 @@ interface Device {
    * @name 从原生获取初始化信息
    */
   getUserData: () => Promise<any>;
+  /**
+   * @name 查询已安装地图列表
+   */
+  mapsList: () => Promise<MapString[]>;
+  /**
+   * @name 调用原生能力打开一个URLScheme
+   */
+  openURLScheme: (params: { url: string }) => Promise<void>;
 }
 
 interface SystemInfo {

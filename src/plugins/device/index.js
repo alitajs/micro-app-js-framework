@@ -8,6 +8,8 @@ const device = {
     'fetchMicroAppList',
     'openMicroApp',
     'getUserData',
+    'mapsList',
+    'openURLScheme',
   ]
 }
 
