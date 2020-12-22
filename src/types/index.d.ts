@@ -5,6 +5,7 @@
 
 interface AlitaBridge {
     callHandler: (handlerName: string, data: any, responseCallback: (response: any) => void) => void;
+    registerPlugin: (pugin: { pluginName: string; methodsList: string[] }) => void;
 }
 
 interface Alita {
