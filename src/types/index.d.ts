@@ -13,6 +13,7 @@ interface Alita {
     media: Media;
     file: File;
     ui: UI;
+    [key: string]: any;
 }
 
 interface Window {
