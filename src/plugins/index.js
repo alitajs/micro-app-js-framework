@@ -2,6 +2,7 @@ import Device from './device';
 import Media from './media';
 import UI from './ui';
 import File from './file';
+import Location from './location';
 
 if (!window.alita) {
     window.alita = {};
@@ -12,6 +13,7 @@ const plugins = [
     Media,
     UI,
     File,
+    Location,
 ];
 
 const AlitaCommandStatus = {

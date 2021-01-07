@@ -2,6 +2,7 @@
 /// <reference path="../plugins/media/types/index.d.ts" />
 /// <reference path="../plugins/ui/types/index.d.ts" />
 /// <reference path="../plugins/file/types/index.d.ts" />
+/// <reference path="../plugins/location/types/index.d.ts" />
 
 interface AlitaBridge {
     callHandler: (handlerName: string, data: any, responseCallback: (response: any) => void) => void;
@@ -13,6 +14,7 @@ interface Alita {
     media: Media;
     file: File;
     ui: UI;
+    location: Location;
     [key: string]: any;
 }
 
