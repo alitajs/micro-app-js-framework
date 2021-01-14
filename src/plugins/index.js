@@ -3,6 +3,7 @@ import Media from './media';
 import UI from './ui';
 import File from './file';
 import Location from './location';
+import Notice from './notice';
 
 if (!window.alita) {
     window.alita = {};
@@ -14,6 +15,7 @@ const plugins = [
     UI,
     File,
     Location,
+    Notice
 ];
 
 const AlitaCommandStatus = {
