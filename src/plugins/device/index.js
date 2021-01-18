@@ -10,6 +10,7 @@ const device = {
     'getUserData',
     'mapsList',
     'openURLScheme',
+    'closeMicroApp'
   ]
 }
 

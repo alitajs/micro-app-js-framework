@@ -43,6 +43,10 @@ interface Device {
    * @name 调用原生能力打开一个URLScheme
    */
   openURLScheme: (params: { url: string }) => Promise<void>;
+  /**
+   * @name 关闭当前微应用
+   */
+  closeMicroApp: (params?: any) => Promise<void>;
 }
 
 interface SystemInfo {
