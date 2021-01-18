@@ -29,4 +29,8 @@ interface Window {
      * @ignore
      */
     WebViewJavascriptBridge: AlitaBridge;
+    /**
+     * @description 容器标识
+     */
+    alitanative?: 'ios' | 'android' | 'web';
 }
